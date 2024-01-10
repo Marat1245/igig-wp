@@ -1,0 +1,94 @@
+.int__map{
+   
+    position: relative;
+}
+
+.int__map .map{
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.black-square, .black-square2 {
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .4s;
+    opacity: 1;
+
+}
+.black-square:hover, .black-square2:hover{
+    opacity: 0.5;
+}
+.highlighted__wrap{
+    
+    z-index: 10;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.int__map__wrap{
+    padding: 40px;
+}
+.gap_20px{
+    display: flex;
+    gap: 20px;
+}
+.big-pin{
+    width: 38px;
+    height: 60px;
+    object-fit: cover;
+}
+.pin-change{
+    cursor: pointer;
+    animation-name: hero__img__anime;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes hero__img__anime {
+    from {
+      transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.wrap{
+    position: relative;
+}
+.fix {
+    position: fixed;
+    top: 50px;
+    background-color: #07a607;
+    color: white;
+    padding: 10px;
+    right: 30px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    animation: spin 1s linear infinite;
+    margin: 12px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
